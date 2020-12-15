@@ -1,0 +1,10 @@
+.header-text { 
+    margin-top: 60px;
+}
+.profile-section { 
+    background-color: #FAFAFA;
+}
+.uk-navbar-left, .uk-navbar-container{ 
+    background-color:none !important;
+    background:none !important;
+}

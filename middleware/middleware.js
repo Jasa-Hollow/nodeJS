@@ -5,6 +5,6 @@ export const parseBody = (req, res, next) => {
     })
     req.on('end', () => {
         req.body = datos
-        next()
+        next();
     })
 }

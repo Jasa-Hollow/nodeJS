@@ -4,7 +4,7 @@ export const renderContact = (req, res) => {
 
 const contact = (req, res) => {
     console.log(req.body);
-    res.end();
+    res.send(req.body);
 }
 
 export default { renderContact, contact }
