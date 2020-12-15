@@ -1,3 +1,10 @@
-exports.renderContact = (req, res) => {
-    res.send(__dirname + "/views/contact.html");
+export const renderContact = (req, res) => {
+    res.render("contact.ejs", {path:"Contact"});
 }
+
+const contact = (req, res) => {
+    console.log(req.body);
+    res.end();
+}
+
+export default { renderContact, contact }

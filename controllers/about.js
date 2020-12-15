@@ -1,3 +1,5 @@
-exports.renderAbout = (req, res) => {
-    res.send(__dirname + "/views/about.html");
+export const renderAbout = (req, res) => {
+    res.render("about.ejs", {path:"About"});
 }
+
+export default { renderAbout };

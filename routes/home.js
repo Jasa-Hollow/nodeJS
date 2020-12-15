@@ -1,8 +1,8 @@
-const express = require('express');
-const controller = require('../controllers/home');
+import express from 'express';
+import controller from '../controllers/home.js';
 
 const router = express.Router(); // Enrutamiento.
 
 router.get('/', controller.renderHome);
 
-module.exports = router;
+export default router;
