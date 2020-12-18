@@ -4,7 +4,8 @@ export const parseBody = (req, res, next) => {
         datos += pedazoDeDatos
     })
     req.on('end', () => {
-        req.body = datos
+        const jsonBody = JSON.parse(datos);
+        req.body = jsonBody;
         next();
     })
 }
