@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= path %> </title>
-    <link rel="stylesheet" href="css/uikit.min.css">
-    <script src="js/uikit.min.js"></script>
-</head>
+    <%- include("./include/head.ejs") %> 
 <body>
-    <div class="uk-cover-container uk-height-medium">
-        <img src="img/header.svg" alt="" uk-cover>
-        <nav class="uk-navbar-container" uk-navbar>
-            <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="/"><img src="img/logo.svg"></a>
-                <ul class="uk-navbar-nav">
-                    <li class="uk-active"><a href="/">Home</a></li>
-                    <li> <a href="about">About</a></li>
-                    <li> <a href="blog">Blog</a></li>
-                    <li><a href="contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+    <%- include("./include/navbar.ejs") %> 
+
+    <div class="uk-container">
+        <div class="uk-card uk-card-default uk-card-body">
+            <form method="POST" action="contact">
+            <fieldset class="uk-fieldset">
+                <legend class="uk-legend">Nombre</legend>
+                <div class="uk-margin">
+                    <input class="uk-input" name="primerNombre" type="text" placeholder="Nombre">
+                </div>
+                <legend class="uk-legend">Apellido</legend>
+                <div class="uk-margin">
+                    <input class="uk-input" name="apellido" type="text" placeholder="Apellido">
+                </div>
+                <legend class="uk-legend">Mensaje</legend>
+                <div class="uk-margin">
+                    <textarea class="uk-textarea" name="mensaje" rows="5" placeholder="Mensaje"></textarea>
+                </div>
+                <div class="uk-margin">
+                    <button type="submit" class="uk-button uk-button-primary">Send</button>
+                </div>
+            </fieldset>
+            </form>
+        </div>
     </div>
+    
 </body>
 </html>

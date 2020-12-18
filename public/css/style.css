@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+body {
+    font-family: 'Lora', serif;
+}
+
+.header-text { 
+    margin-top: 60px;
+}
+
+.profile-section { 
+    background-color: #FAFAFA;
+}
+.uk-navbar-left, .uk-navbar-container{ 
+    background-color:none !important;
+    background:none !important;
+}
+
+.uk-container { 
+    padding-top: 20px;
+}
+.uk-cover { 
+    z-index: -1;
+}
+
+.button-primary { 
+    background-color:#FF5300 !important; 
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.button-secondary { 
+    background-color:none !important; 
+    color: #FF5300;
+    background:none !important;
+    border: solid 1px;
+    border-radius: 3px;
+    border-color: #FF5300 !important;
+    margin-right: 10px;
+}
+
+.offset {
+    margin-top: -80px !important;
+}

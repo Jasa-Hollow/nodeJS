@@ -1,7 +1,17 @@
-import { posts } from '../models/post.js';
+
+import { Post } from '../models/post.js';
 
 export const renderBlog = (req, res) => {
-    res.render("blog.ejs", {path:"Blog", posts: posts });
+    Post.find((err, posts) => {
+        res.render("blog.ejs", {path: "Blog", posts: posts });
+    })
 }
 
-export default { renderBlog };
+export const post = (req, res) => {
+    const postRecibido = new Post({ title: req.body.title, body: req.body.body });
+    postRecibido.save((err) => {
+        res.redirect('/');
+    })
+}
+
+export default { renderBlog, post };
