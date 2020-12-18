@@ -8,4 +8,5 @@ router.use(bodyParser.urlencoded({ extended: true }));
 router.get('/', controller.renderBlog);
 router.post('/', controller.post)
 
+
 export default router;

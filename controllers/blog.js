@@ -1,3 +1,4 @@
+
 import { Post } from '../models/post.js';
 
 export const renderBlog = (req, res) => {
