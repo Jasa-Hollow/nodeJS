@@ -13,6 +13,7 @@ import homeRouter from './routes/home.js';
 import blogRouter from './routes/blog.js';
 import contactRouter from './routes/contact.js';
 import aboutRouter from './routes/about.js';
+import authRouter from './routes/auth.js';
 // ----------------------------------------------------------
 
 dotenv.config();
@@ -31,6 +32,7 @@ server.use("/", homeRouter);
 server.use("/blog", blogRouter);
 server.use("/about", aboutRouter);
 server.use("/contact", contactRouter);
+server.use("/auth", authRouter);
 // ----------------------------------------------------------
 
 server.listen(8080);
