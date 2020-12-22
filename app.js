@@ -18,9 +18,9 @@ import aboutRouter from './routes/about.js';
 
 dotenv.config();
 connectDB();
-
 const server = express();
 
+// Middleware
 server.use(express.static(path.join(process.cwd(), 'public')))
 
 server.set('views', path.join(process.cwd(), "views"));

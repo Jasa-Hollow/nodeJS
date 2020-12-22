@@ -4,36 +4,19 @@
 <body>
     <%- include("./include/navbar.ejs") %> 
 
-    <div class="uk-card uk-card-default uk-card-body">
-        <h1 class="uk-heading-small uk-center-top">Create a new post</h1>
-        <form method="POST" action="blog">
-          <fieldset class="uk-fieldset">
-            <legend class="uk-legend">Title</legend>
-            <div class="uk-margin">
-              <input class="uk-input" name="title" type="text" placeholder="Title">
-            </div>
-            <legend class="uk-legend">Body</legend>
-            <div class="uk-margin">
-              <textarea class="uk-textarea" name="body" rows="5" placeholder="Body"></textarea>
-            </div>
-            <div class="uk-margin">
-              <button type="submit" class="uk-button uk-button-primary">Send</button>
-            </div>
-          </fieldset>
-        </form>
-      </div>
-
-      <div class="uk-child-width-expand@s uk-text-center" uk-grid>
-        <% posts.forEach(p=> {%>
-          <div>
-            <div class="uk-card uk-card-default uk-card-body">
-              <h1>
-                <%= p.title %>
-              </h1>
-              <%= p.body %>
-            </div>
-          </div>
-          <% }); %>
+    <div class="uk-container">
+      
+      <a href="/blog/new-post">
+        <button class="uk-button button-primary">
+          New Post
+        </button>
+      </a>
+        <div class="uk-grid-match uk-grid-small" uk-grid>
+          <% posts.forEach(p => {%>
+            <!-- include a post article for each post -->
+            <%- include('./include/blog/post', {post:p}) %>
+              <% }); %>
+        </div>
       </div>
 </body>
 </html>
