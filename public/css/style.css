@@ -43,3 +43,16 @@ body {
 .offset {
     margin-top: -80px !important;
 }
+
+.primar-color-username { 
+    color: #FF5300;
+    font-weight: 500;
+}
+
+.post-item-left-bar {
+    position: absolute;
+    left: 1px;
+    height: 45px;
+    width: 3px;
+    background-color:#FF5300;
+}
