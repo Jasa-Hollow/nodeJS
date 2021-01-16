@@ -1,0 +1,33 @@
+<div class="uk-container">
+    <section class="uk-text-center" uk-grid>
+        <div class="uk-width-1" profile-section">
+            <div class="uk-card uk-card-default uk-card-body uk-background-secondary">
+                <img src="img/xeno2.png" />
+            </div>
+        </div>
+        <div class="uk-width-1">
+            <div class="uk-card uk-card-default uk-card-body">
+                <h1 class="uk-heading-small header-text">Index Blog Project</h1>
+                <p> 
+                    Bienvenido a un blog creado con NodeJS, es mi primer
+                    proyecto utilizando este entorno de desarrollo, y la verdad estoy
+                    muy emocionado :)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="uk-card uk-card-default" uk-grid>
+        <div class="uk-width-1-2@m">
+            <h1 class="uk-card-title">Latest Posts</h1>
+        </div>
+        <div class="uk-width-1-2@m">
+            <button class="uk-button button-primary uk-position-top-right">All</button>
+        </div>
+        <div class="uk-card uk-card-default uk-card-body uk-width-3-3@m">
+            <% post={title:"Latest", body:"Some post"} %>
+                <%- include('../blog/post', post) %>
+        </div>
+    </div>
+
+</div>

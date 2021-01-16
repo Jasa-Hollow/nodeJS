@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./include/head.ejs') %>
+
+    <body>
+        <!-- include the navigation partial -->
+        <%- include('./include/navbar.ejs') %>
+
+            <div class="uk-container">
+                <div class="uk-card uk-card-default uk-card-body">
+                    <h1 class="uk-heading-small uk-center-top">Login</h1>
+                    <form method="POST" action="login">
+                        <fieldset class="uk-fieldset">
+                            <legend class="uk-legend">Email</legend>
+                            <div class="uk-margin">
+                                <input class="uk-input" name="email" type="email" rows="5"
+                                    placeholder="Enter your email" />
+                            </div>
+                            <legend class="uk-legend">Password</legend>
+                            <div class="uk-margin">
+                                <input class="uk-input" name="password" type="password" rows="5"
+                                    placeholder="Enter your Password" />
+                            </div>
+
+                            <div class="uk-margin">
+                                <button type="submit" class="uk-button button-primary">
+                                    Login
+                                </button>
+                            </div>
+                        </fieldset>
+                    </form>
+                    Or
+                    <button class="uk-button button-primary">
+                        <a href="/auth/register">Register</a>
+                    </button>
+                </div>
+            </div>
+    </body>
+
+</html>

@@ -1,14 +1,20 @@
 <div class="uk-cover-container uk-height-medium">
-  <img src="/img/header.svg" alt="" uk-cover>
+  <img src="/img/uraya.jpg" alt="" uk-cover />
   <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
-      <a class="uk-navbar-item uk-logo" href="/home"><img src="/img/logo_jasa.png"></a>
+      <a class="uk-navbar-item uk-logo" href="/home">
+        <img src="/img/logo_jasa.png"/>
+      </a>
       <ul class="uk-navbar-nav">
-        <li><a href="/">Home</a></li>
+        <li>
+          <a href="/" class="navItem">Home</a>
+        </li>
         <li class="<%= path ==='About' && 'uk-active'%>">
           <a href="/about">About</a>
         </li>
-        <li class="<%= path ==='Blog' && 'uk-active' %>"> <a href="/blog">Blog</a></li>
+        <li class="<%= path ==='Blog' && 'uk-active' %>">
+          <a href="/blog">Blog</a>
+        </li>
         <li class="<%= path ==='Contact' && 'uk-active' %>">
           <a href="/contact">Contact</a>
         </li>
@@ -17,14 +23,19 @@
     <div class="uk-navbar-right">
       <ul class="uk-navbar-nav">
         <li>
-          <button class="uk-button button-primary">Login</button>
+          <a href="/auth">
+            <button class="uk-button button-primary">Log</button>
+          </a>
         </li>
-        <li> <button class="uk-button button-secondary">Donate</button></li>
+        <li>
+          <a href="#">
+            <button class="uk-button button-secondary">Donate</button>
+          </a>
+        </li>
       </ul>
     </div>
   </nav>
-  <h1 class="uk-heading-small uk-position-center">
+  <h1 class="uk-heading-small uk-text-center" id="title">
     <%= path %>
   </h1>
-
 </div>

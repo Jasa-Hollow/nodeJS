@@ -11,6 +11,7 @@ body {
 .profile-section { 
     background-color: #FAFAFA;
 }
+
 .uk-navbar-left, .uk-navbar-container{ 
     background-color:none !important;
     background:none !important;
@@ -55,4 +56,16 @@ body {
     height: 45px;
     width: 3px;
     background-color:#FF5300;
+}
+
+#title {
+    font-size: 70px !important;
+    font-style: italic;
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+}
+
+.navItem {
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
 }

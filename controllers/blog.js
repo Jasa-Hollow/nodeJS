@@ -20,6 +20,8 @@ export const detail = (req, res) => {
 }
 
 export const renderNewPost = (req, res) => {
+    const cookie = req.get('Cookie');
+    console.log(cookie);
     res.render('new-post.ejs', {path: "New Post"});
 }
 
